@@ -46,7 +46,38 @@ namespace GeesWPF.Properties {
                 this["CloseAfterLanding"] = value;
             }
         }
-        
+
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DelayDisplay
+        {
+            get
+            {
+                return ((bool)(this["DelayDisplay"]));
+            }
+            set
+            {
+                this["DelayDisplay"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int DelayDisplayTime
+        {
+            get
+            {
+                return ((int)(this["DelayDisplayTime"]));
+            }
+            set
+            {
+                this["DelayDisplayTime"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
@@ -106,5 +137,7 @@ namespace GeesWPF.Properties {
                 this["LandingY"] = value;
             }
         }
+
+      
     }
 }

@@ -42,11 +42,18 @@
                 <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="201,308,-17,-289" TextWrapping="Wrap" Text="Gees | Icons ©FontAwesome" VerticalAlignment="Top" Width="106" FontSize="8"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="groupBox_Copy" Header="Slider Settings" HorizontalAlignment="Left" Height="80" Margin="10,230,0,0" VerticalAlignment="Top" Width="323" Foreground="#FFF1FAEE">
-            <Grid HorizontalAlignment="Left" Height="40" Margin="10,10,-1.8,0" Width="290" VerticalAlignment="Top">
-                <Button x:Name="buttonTest" Content="Test" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Height="32" Background="#FFA8DADC" Foreground="#FF1D3557" Click="buttonTest_Click" Margin="242,2,-3,0"/>
-                <CheckBox x:Name="checkBox" Content="Auto close - Bounce timer (s):" Margin="1,13,106,0" VerticalAlignment="Top" Foreground="#FFF1FAEE" IsChecked="{Binding AutoCloseLanding, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" Checked="checkBox_Checked"/>
-                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="19" Margin="184,11,0,0" TextWrapping="Wrap" Text="{Binding CloseAfterLanding, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" VerticalAlignment="Top" Width="30" RenderTransformOrigin="-1.284,0.719" TextAlignment="Right" TextChanged="textBox_TextChanged" PreviewTextInput="textBox_PreviewTextInput"/>
+        <GroupBox x:Name="groupBox_Copy" Header="Slider Settings" HorizontalAlignment="Left" Height="85" Margin="10,230,0,0" VerticalAlignment="Top" Width="323" Foreground="#FFF1FAEE">
+            <Grid HorizontalAlignment="Left" Height="80" Margin="10,10,-1.8,0" Width="290" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="buttonTest" Content="Test" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Height="32" Background="#FFA8DADC" Foreground="#FF1D3557" Click="buttonTest_Click" Margin="242,2,-3,0" Grid.Row="0"/>
+                <CheckBox x:Name="checkBox" Content="Auto close - Bounce timer (s):" Margin="1,5,106,0" VerticalAlignment="Top" Foreground="#FFF1FAEE" IsChecked="{Binding AutoCloseLanding, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" Checked="checkBox_Checked" Grid.Row="0"/>
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="19" Margin="184,5,0,0" TextWrapping="Wrap" Text="{Binding CloseAfterLanding, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" VerticalAlignment="Top" Width="30" RenderTransformOrigin="-1.284,0.719" TextAlignment="Right" TextChanged="textBox_TextChanged" PreviewTextInput="textBox_PreviewTextInput" Grid.Row="0"/>
+               
+                <CheckBox x:Name="checkBox2" Content="Delay display - timer (s):" Margin="1,0,106,0" VerticalAlignment="Top" Foreground="#FFF1FAEE" IsChecked="{Binding DelayDisplay, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" Checked="checkBox_Checked2" Grid.Row="1"/>
+                <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="19" Margin="184,0,0,0" TextWrapping="Wrap" Text="{Binding DelayDisplayTime, Mode=TwoWay, Source={x:Static properties:Settings.Default}}" VerticalAlignment="Top" Width="30" RenderTransformOrigin="-1.284,0.719" TextAlignment="Right" TextChanged="textBox_TextChanged2" PreviewTextInput="textBox_PreviewTextInput" Grid.Row="1"/>
             </Grid>
         </GroupBox>
         <GroupBox x:Name="groupBox_Copy1" Header="Landings" HorizontalAlignment="Left" Height="80" Margin="10,315,0,0" VerticalAlignment="Top" Width="323" Foreground="#FFF1FAEE">

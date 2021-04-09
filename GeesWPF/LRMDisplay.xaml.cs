@@ -66,7 +66,16 @@ namespace GeesWPF
             {
                 timerClose.Start();
             }
-            this.BeginStoryboard(FindResource("show") as Storyboard);
+
+            var delay = TimeSpan.FromSeconds(0);
+            if(Properties.Settings.Default.DelayDisplay)
+                delay = TimeSpan.FromSeconds(Properties.Settings.Default.DelayDisplayTime);
+
+            var t = Task.Delay(delay);
+            t.ContinueWith(_ =>
+            {
+                this.BeginStoryboard(FindResource("show") as Storyboard);
+            }, TaskScheduler.FromCurrentSynchronizationContext());
         }
         private void image1_MouseDown(object sender, MouseButtonEventArgs e)
         {

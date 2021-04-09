@@ -362,7 +362,24 @@ namespace GeesWPF
             }
         }
 
+        private void textBox_TextChanged2(object sender, TextChangedEventArgs e)
+        {
+            if (int.TryParse(textBox.Text, out _))
+            {
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
         private void checkBox_Checked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.Save();
+        }
+
+        private void checkBox_Checked2(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.Save();
         }
