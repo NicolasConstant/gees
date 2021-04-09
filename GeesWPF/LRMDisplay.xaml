@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeesWPF"
         mc:Ignorable="d"
-        Title="LRMDisplay" Height="260" Width="1" Topmost="True" WindowStyle="None" Background="#FF1D3557" ResizeMode="NoResize" Left="-1" Top="40" ShowInTaskbar="False">
+        Title="LRMDisplay" Height="260" Width="1" Topmost="True" WindowStyle="None" Background="#FF1D3557" ResizeMode="NoResize" Left="-2" Top="40" ShowInTaskbar="False">
     <Window.Resources>
         <Storyboard x:Key="show" TargetProperty="Margin">
             <DoubleAnimation Duration="0:0:0.3" Storyboard.TargetProperty="Width" From="2" To="350" AccelerationRatio=".5">
